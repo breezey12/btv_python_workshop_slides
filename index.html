@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Burlington Pytho Workshop</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Burlington Python Workshop</h1>
+					<h3>Get Started With Python for Beginners</h3>
+					<p>
+						<small>Created by <a href="http://www.meetup.com/nxtvtdev/">Burlington Python</a> / <a href="https://twitter.com/btvpython"><@btvpython></@btvpython></a></small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				
+				<section>
+						<h2>The Command Line</h2>
+						<p>Basic commands for getting around in terminal (for mac osx) and/or Powershell (for windows)</p>
+						
+					</section>
+
+					<section>
+					<h2>Basic Commands</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Command</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>pwd</td>
+								<td>print working directory</td>
+							<tr>
+							<tr>
+								<td>ls/dir</td>
+								<td>list directories</td>
+							<tr>
+							<tr>
+								<td>cd</td>
+								<td>change directory</td>
+							<tr>
+							<tr>
+								<td>mkdir</td>
+								<td>creates new directory</td>
+							<tr>
+						</tbody>
+					</table>
+				</section>
+				
+				<section>
+					<h1>&#8593</h1>
+					<p>Retrieves previous command</p>
+
+				</section>
+
+				<section>
+					<h2>CTRL L</h2>
+					<p>Gives you a blank slate</p>
+
+					<h2>CTRL C</h2>
+					<p>Breaks you out of current program</p>
+
+				</section>
+
+				<section>
+					<h2>Command Line Cheat Sheet</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Command</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>pwd</td>
+								<td>print working directory</td>
+							<tr>
+							<tr>
+								<td>ls/dir</td>
+								<td>list directories</td>
+							<tr>
+							<tr>
+								<td>cd</td>
+								<td>change directory</td>
+							<tr>
+							<tr>
+								<td>mkdir</td>
+								<td>creates new directory</td>
+							<tr>
+								<tr>
+								<td>&#8593</td>
+								<td>scrolls up</td>
+							<tr>
+							<tr>
+								<td>CTRL C</td>
+								<td>breaks out</td>
+							<tr>
+							<tr>
+								<td>CTRL L</td>
+								<td>blank slate</td>
+							<tr>
+						</tbody>
+					</table>
+				</section>
+
+
+
+				<section>
+					<section>
+						<h2>Users Input</h2>
+						<p>How to take in and pick apart a users input in your python program</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					
+					<section>
+						<h2>User Input Example</h2>
+						<p>Use the raw_input() function to take in text from a user</p>
+						
+						<section>
+					<pre><code data-trim contenteditable>
+birthplace = raw_input("Hey, where were you born?")
+print "You were born in: ", birthplace 
+					</code></pre>
+					<p>Run this on your command line in iPython by typing:</p>
+					<pre>
+$ execfile(whatyounamedyourfile.py) 
+					</pre>
+					<p>This is what your program looks like:</p>
+					<IMG SRC="/Users/brendanreese/Dropbox/NextVTDev/Python/Workshop/reveal.js-3.1.0/images/raw_input_commandline.png" WIDTH=285 HEIGHT=69>
+				</section>
+					</section>
+				
+				</section>
+
+
+
+				<section>
+					<section>
+						<h2>String <strike>Theory</strike> Practice</h2>
+						<p>Remember, Python recognizes a string when it sees 'single' or "double" quotes</p>
+						<br>
+						<p>phrase = 'Hello, World'</p>
+						<p>my_string = "We're #1"</p>
+						<p>string_number = "12345"</p>
+					</section>
+				</section>	
+					<section>
+						<h2>Bad Idea: Doing Math with Strings</h2>
+						<pre>
+$ my_number = "12"
+$ print my_number * 3
+121212
+$
+					</pre>
+						<p>121212 is cute, but probably not very useful.</p>
+					</section>
+
+
+				<section>
+					<h2>Good Idea: Convert to Integers First, and then Do Math</h2>
+					<pre>
+$ my_number = int(12)  
+$ my_number * 3
+36
+$
+					</pre>
+					<p>Or use float() to add a decimal point:</p>
+										<pre>
+$ my_number = float(12)
+$ my_number * 3
+36.0
+$
+					</pre>
+				</section>
+
+				<section>
+					<h2>Important "String" Instruments:</h2>
+				</section>
+
+				<section>
+					<p>Marry Poppins using python's len()</p>
+					<pre>
+$ len("Supercalifragilisticexpialidocious")
+34
+$
+					</pre>
+				</section>
+
+				<section>
+					<p>Find a string within a string with find():</p>
+					<pre>
+$ phrase = "Great, 23 encyclopedias of text typed out for us when python is the only topic we care about."
+$ print phrase.find("python")
+54
+$
+					</pre>
+				</section>
+
+				<section>
+					<p>Use format() for a mail merge without Microsoft:</p>
+					<pre>
+$ name = "Jennifer"  <font color="red"># assign the variable name</font>
+$ participants = 12  <font color="red"># assign the variable participants</font>
+$ instructors = 3 <font color="red"># assign the variable instructors</font>
+$ ratio = participants/instructors <font color="red"># assign the ratio variable to participants divided by instructors</font> 
+$
+$ print "Hi {}, Our Python Workshop has {} participants and {} instructors, for a {}:1 ratio of participants to instructors".format(name, participants, instructors, ratio)
+Hi Jennifer, Our Python Workshop has 12 participants and 3 instructors, for a 4:1 ratio of participants to instructors
+$
+
+					</pre>
+
+				</section>
+
+
+				<section>
+					<h2>Lists</h2>
+					<p>Lists are a data type that contain items</p>
+					
+					<pre><code data-trim contenteditable>
+desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
+scores = [10, 8, 9, -2, 9]
+					</code></pre>	
+				</section>
+
+				<section>
+					<h2>List Tricks</h2>
+					<p>How to get a single item out of a list:</p>
+					<pre><code data-trim contenteditable>
+$ desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
+$ print desserts[2]
+brownies
+$
+					</code></pre>	
+				</section>
+
+				<section>
+					<p>How to get multiple items out of a list:</p>
+					<pre><code data-trim contenteditable>
+$ desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
+$ print desserts[1:3]
+['cookies', 'brownies']
+$
+					</code></pre>	
+				</section>
+
+				<section>
+					<p>How to create an empty list and start adding to it:</p>
+					<pre><code data-trim contenteditable>
+$ animals = []   # create an empty list with []
+$ animals.append("lions")
+$ animals.append("tigers")
+$ animals.append("bears")
+$ print animals
+['lions', 'tigers', 'bears']
+					</code></pre>	
+				</section>
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
