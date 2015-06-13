@@ -52,7 +52,7 @@
 				
 				<section>
 						<h2>The Command Line</h2>
-						<p>Basic commands for getting around in terminal (for mac osx) and/or Powershell (for windows)</p>
+						<p>Basic commands for getting around in terminal (for mac osx) and/or Windows command prompt</p>
 						
 					</section>
 
@@ -72,7 +72,7 @@
 							<tr>
 							<tr>
 								<td>ls/dir</td>
-								<td>list directories</td>
+								<td>lists all contents of current directory</td>
 							<tr>
 							<tr>
 								<td>cd</td>
@@ -145,7 +145,87 @@
 
 
 
+				
+
+
 				<section>
+					<section>
+						<h2>String <strike>Theory</strike> Practice</h2>
+						<p>Remember, Python recognizes a string when it sees 'single' or "double" quotes</p>
+						<br>
+						<p>phrase = 'Hello, World'</p>
+						<p>my_string = "We're #1"</p>
+						<p>string_number = "12345"</p>
+					</section>
+				</section>	
+					<section>
+						<h2>Bad Idea: Doing Math with Strings</h2>
+						<pre>
+>>> my_number = "12"
+>>> print my_number * 3
+121212
+>>>
+					</pre>
+						<p>121212 is cute, but probably not very useful.</p>
+					</section>
+
+
+				<section>
+					<h2>Good Idea: Convert to Integers First, and then Do Math</h2>
+					<pre>
+>>> my_number = int(12)  
+>>> my_number * 3
+36
+>>>
+					</pre>
+					<p>Or use float() to add a decimal point:</p>
+										<pre>
+>>> my_number = float(12)
+>>> my_number * 3
+36.0
+>>>
+					</pre>
+				</section>
+
+				<section>
+					<h2>Important "String" Instruments:</h2>
+				</section>
+
+				<section>
+					<p>Mary Poppins using python's len()</p>
+					<pre>
+>>> len("Supercalifragilisticexpialidocious")
+34
+>>>
+					</pre>
+				</section>
+
+				<section>
+					<p>Find a string within a string with find():</p>
+					<pre>
+>>> phrase = "Great, 23 encyclopedias of text typed out for us when python is the only topic we care about."
+>>> print phrase.find("python")
+54
+>>>
+					</pre>
+				</section>
+
+				<section>
+					<p>How about this for a mail:</p>
+					<pre>
+>>> name = "Jennifer"  <font color="red"># assign the variable name</font>
+>>> participants = 12  <font color="red"># assign the variable participants</font>
+>>> instructors = 3 <font color="red"># assign the variable instructors</font>
+>>> ratio = participants/instructors <font color="red"># assign the ratio variable to participants divided by instructors</font> 
+>>>
+>>> print "Hi {}, Our Python Workshop has {} participants and {} instructors, for a {}:1 ratio of participants to instructors".format(name, participants, instructors, ratio)
+Hi Jennifer, Our Python Workshop has 12 participants and 3 instructors, for a 4:1 ratio of participants to instructors
+>>>
+
+					</pre>
+
+				</section>
+<section>
 					<section>
 						<h2>Users Input</h2>
 						<p>How to take in and pick apart a users input in your python program</p>
@@ -164,95 +244,19 @@
 birthplace = raw_input("Hey, where were you born?")
 print "You were born in: ", birthplace 
 					</code></pre>
-					<p>Run this on your command line in iPython by typing:</p>
+					<p>Save as userinput.py and run this on your command line in Python by typing:</p>
 					<pre>
-$ execfile(whatyounamedyourfile.py) 
+>>> python userinput.py  
 					</pre>
 					<p>This is what your program looks like:</p>
-					<IMG SRC="/Users/brendanreese/Dropbox/NextVTDev/Python/Workshop/reveal.js-3.1.0/images/raw_input_commandline.png" WIDTH=285 HEIGHT=69>
+					<pre><code data-trim contenteditable>
+Brendans-MacBook-Air:workshop brendanreese$ python userinput.py 
+Hey, where were you born?Hanover, NH
+You were born in:  Hanover, NH 
+					</code></pre>
 				</section>
 					</section>
 				
-				</section>
-
-
-
-				<section>
-					<section>
-						<h2>String <strike>Theory</strike> Practice</h2>
-						<p>Remember, Python recognizes a string when it sees 'single' or "double" quotes</p>
-						<br>
-						<p>phrase = 'Hello, World'</p>
-						<p>my_string = "We're #1"</p>
-						<p>string_number = "12345"</p>
-					</section>
-				</section>	
-					<section>
-						<h2>Bad Idea: Doing Math with Strings</h2>
-						<pre>
-$ my_number = "12"
-$ print my_number * 3
-121212
-$
-					</pre>
-						<p>121212 is cute, but probably not very useful.</p>
-					</section>
-
-
-				<section>
-					<h2>Good Idea: Convert to Integers First, and then Do Math</h2>
-					<pre>
-$ my_number = int(12)  
-$ my_number * 3
-36
-$
-					</pre>
-					<p>Or use float() to add a decimal point:</p>
-										<pre>
-$ my_number = float(12)
-$ my_number * 3
-36.0
-$
-					</pre>
-				</section>
-
-				<section>
-					<h2>Important "String" Instruments:</h2>
-				</section>
-
-				<section>
-					<p>Marry Poppins using python's len()</p>
-					<pre>
-$ len("Supercalifragilisticexpialidocious")
-34
-$
-					</pre>
-				</section>
-
-				<section>
-					<p>Find a string within a string with find():</p>
-					<pre>
-$ phrase = "Great, 23 encyclopedias of text typed out for us when python is the only topic we care about."
-$ print phrase.find("python")
-54
-$
-					</pre>
-				</section>
-
-				<section>
-					<p>Use format() for a mail merge without Microsoft:</p>
-					<pre>
-$ name = "Jennifer"  <font color="red"># assign the variable name</font>
-$ participants = 12  <font color="red"># assign the variable participants</font>
-$ instructors = 3 <font color="red"># assign the variable instructors</font>
-$ ratio = participants/instructors <font color="red"># assign the ratio variable to participants divided by instructors</font> 
-$
-$ print "Hi {}, Our Python Workshop has {} participants and {} instructors, for a {}:1 ratio of participants to instructors".format(name, participants, instructors, ratio)
-Hi Jennifer, Our Python Workshop has 12 participants and 3 instructors, for a 4:1 ratio of participants to instructors
-$
-
-					</pre>
-
 				</section>
 
 
@@ -261,8 +265,8 @@ $
 					<p>Lists are a data type that contain items</p>
 					
 					<pre><code data-trim contenteditable>
-desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
-scores = [10, 8, 9, -2, 9]
+>>> desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
+>>> scores = [10, 8, 9, -2, 9]
 					</code></pre>	
 				</section>
 
@@ -270,35 +274,42 @@ scores = [10, 8, 9, -2, 9]
 					<h2>List Tricks</h2>
 					<p>How to get a single item out of a list:</p>
 					<pre><code data-trim contenteditable>
-$ desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
-$ print desserts[2]
+>>> desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
+>>> print desserts[2]
 brownies
-$
+>>>
 					</code></pre>	
 				</section>
 
 				<section>
 					<p>How to get multiple items out of a list:</p>
 					<pre><code data-trim contenteditable>
-$ desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
-$ print desserts[1:3]
+>>> desserts = ["ice cream", "cookies", "brownies", "tiramisu"]
+>>> print desserts[1:3]
 ['cookies', 'brownies']
-$
+>>>
 					</code></pre>	
 				</section>
 
 				<section>
 					<p>How to create an empty list and start adding to it:</p>
 					<pre><code data-trim contenteditable>
-$ animals = []   # create an empty list with []
-$ animals.append("lions")
-$ animals.append("tigers")
-$ animals.append("bears")
-$ print animals
+>>> animals = []   # create an empty list with []
+>>> animals.append("lions")
+>>> animals.append("tigers")
+>>> animals.append("bears")
+>>> print animals
 ['lions', 'tigers', 'bears']
 					</code></pre>	
 				</section>
 				
+				<section>
+					<h2><u>Trivia Night: Module 1</u></h2>
+					<h3>Let's break it down into 3 sections:</h3>
+					<p>1. Create a list of an initial 3 teams</p>
+					<p>2. Wait! A few friends join and you ask them to enter their team name. Don't forget to append it to the list!</p>
+					<p>3. Print out the team names for the whole pub to see.</p>
+				</section>
 
 			</div>
 
